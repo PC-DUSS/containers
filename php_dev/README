@@ -8,3 +8,5 @@ To create the container, enter:
 
 To launch the container, enter:
   podman start <container_name>
+
+You can now access your server at 127.0.0.1:8080

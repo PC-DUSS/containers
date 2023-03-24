@@ -1,7 +1,10 @@
 Dockerfile to build a local PHP dev environment
 
-"launch" is used to run the container for the first time using Podman
+To build the container, enter:
+  podman build --tag <desired_image_name> ./
 
-Subsequently, use "podman start" to start the container if it is ever stopped
+To create the container, enter:
+  podman create -d -p 8080:80 -v <path_to_project_dir>:/var/www/html/ --name <desired_container_name> <image_name>
 
-Contains the config file for PHP-FPM "www.conf" to be used inside the container
+To launch the container, enter:
+  podman start <container_name>
